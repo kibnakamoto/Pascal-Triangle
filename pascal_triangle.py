@@ -19,7 +19,7 @@
 #            tmp.append(1)
 #
 #    print()
-n = 20
+n = 25
 tmp = []
 prev = []
 prevs = []
@@ -37,8 +37,9 @@ for i in range(1,n):
         else:
             tmp.append(1)
 
+mul = n//10+1
 for i in range(len(prevs)):
-    print((n*3-i*3)*" ", end='')
+    print((n*mul-i*mul)*" ", end='')
     for j in range(len(prevs[i])):
         #print(str(prevs[i][j]).zfill(len(str(max(prevs[-1])))), end=' ')
         print(str(prevs[i][j]), end=(len(str(max(prevs[-1])))-len(str(prevs[i][j]))+1)*' ')
